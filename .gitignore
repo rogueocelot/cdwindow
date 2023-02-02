@@ -1,0 +1,9 @@
+# vs settings
+*.vscode
+
+#.o files
+*.o
+*.gch
+
+#txt files
+*.txt
