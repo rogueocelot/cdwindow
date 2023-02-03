@@ -7,3 +7,7 @@
 
 #txt files
 *.txt
+
+#temp files
+*~
+*#
