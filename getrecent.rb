@@ -23,6 +23,6 @@ while true do
   #print it for debugging
   #puts mostRecent
 
-  sleep(3)
+  sleep(2)
 end
 

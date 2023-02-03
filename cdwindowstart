@@ -1,0 +1,3 @@
+#!/bin/bash
+
+ruby ~/.cdwindow/getloc.rb & ruby ~/.cdwindow/getrecent.rb
