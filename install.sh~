@@ -1,5 +1,0 @@
-#!/bin/bash
-
-mkdir ~/.cdwindow
-cp getloc.rb getrecent.rb ~/.cdwindow/
-sudo cp cdwindow /bin
