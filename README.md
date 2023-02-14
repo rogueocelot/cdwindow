@@ -24,8 +24,14 @@ To remove:
 To start monitoring dbus-monitor, use the following commands:
 ```bash
 cd ~/.cdwindow/
-./cdwindowstart &
+ruby getloc.rb &
 ```
+or
+```bash
+cd ~/.cdwindow/
+./getloc.rb &
+```
+
 This will create a backround process in the terminal, after which you may use the command
 ```bash
 . cdwindow
@@ -36,10 +42,13 @@ source cdwindow
 ```
 To cd into the most recently opened directory in nautilus. Without the `.` or `source`, it would only change the directory of a child process, which is less than helpful.
 
+###Example Usage
+![Example usage](example.png?raw=true)  
+
 ### Etc
-If you wish to close the terminal but keep `cdwindowstart` running, you can try using `setsid`
+If you wish to close the terminal but keep `getloc.rb` running, you can try using `setsid`
 ```bash
-setsid ./cdwindowstart &
+setsid ./getloc.rb &
 ```
 However, this occasionally doesn't read the user changing directories in Nautilus correctly.  
 
@@ -48,6 +57,6 @@ However, this occasionally doesn't read the user changing directories in Nautilu
 I was expirementing with ways to make the monitoring start on startup or login, but ran into issues with different methods  
 - Adding cron job didn't work (but might with a sleep command before it, since it starts long before login)
 - Adding script to `/etc/profile.d` caused Gnome GUI to be unable to start (most likely because the script doesnt quit, might be able to workaround with a child process)
-- Adding cdwindowstart to `/bin/` resulted in it not functioning properly, even with absolute paths added
+- Adding getloc.rb to `/bin/` resulted in it not functioning properly
 - I was unable to get a .desktop file in `~/.config/autostart/` to work properly
 
