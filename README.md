@@ -42,8 +42,9 @@ source cdwindow
 ```
 To cd into the most recently opened directory in nautilus. Without the `.` or `source`, it would only change the directory of a child process, which is less than helpful.
 
-###Example Usage
+### Example Usage
 ![Example usage](example.png?raw=true)  
+with /backup/emacs being the directory open in Nautilus.
 
 ### Etc
 If you wish to close the terminal but keep `getloc.rb` running, you can try using `setsid`
