@@ -22,7 +22,6 @@ while true do
       #puts i
       #clean the string
       mostRecent = i[30..-3]
-      #mostRecent = mostRecent[0..-2]
     end
   end
   #clean location file
@@ -30,7 +29,15 @@ while true do
   #clean old address
   File.open("dest.txt", "w") {|file| file.truncate(0)}
   #write most recent address
+
+  #search string for "%20" and replace with " " for spaces in destination
+  if mostRecent =~ /%20/
+    #no escape character needed for single quotes
+    mostRecent = mostRecent.gsub("%20", ' ')
+  end
+  
   File.open("dest.txt", "w") {|file| file.write(mostRecent)}
+  
   #print it for debugging
   #puts mostRecent
 

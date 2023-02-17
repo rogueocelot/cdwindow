@@ -2,4 +2,4 @@
 
 dest=`cat ~/.cdwindow/dest.txt`
 cd
-cd $dest
+cd "$dest"
