@@ -1,7 +1,7 @@
 # cdwindow
 
-This program uses dbus-monitor output to save the most recently opened directory in Nautilus.  
-This is for use with Gnome, which doesn't support `open in terminal` with non default terminals.
+This program uses dbus-monitor output to save the most recently opened directory in Nautilus (GNOME Files).  
+This is for use with GNOME, which only supports right click -> `open in terminal` with GNOME Terminal.
 
 ## Installation
 To install, `cd` into the program directory and run:
@@ -40,7 +40,7 @@ or
 ```bash
 source cdwindow
 ```
-To cd into the most recently opened directory in nautilus. Without the `.` or `source`, it would only change the directory of a child process, which is less than helpful.
+To cd into the most recently opened directory in Nautilus. Without the `.` or `source`, it would only change the directory of a child process, which is less than helpful.
 
 ### Example Usage
 ![Example usage](example.png?raw=true)  
@@ -57,7 +57,7 @@ However, this occasionally doesn't read the user changing directories in Nautilu
 
 I was expirementing with ways to make the monitoring start on startup or login, but ran into issues with different methods  
 - Adding cron job didn't work (but might with a sleep command before it, since it starts long before login)
-- Adding script to `/etc/profile.d` caused Gnome GUI to be unable to start (most likely because the script doesnt quit, might be able to workaround with a child process)
+- Adding script to `/etc/profile.d` caused GNOME GUI to be unable to start (most likely because the script doesnt quit, might be able to workaround with a child process)
 - Adding getloc.rb to `/bin/` resulted in it not functioning properly
 - I was unable to get a .desktop file in `~/.config/autostart/` to work properly
 

@@ -33,7 +33,7 @@ while true do
   #search string for "%20" and replace with " " for spaces in destination
   if mostRecent =~ /%20/
     #no escape character needed for single quotes
-    mostRecent = mostRecent.gsub("%20", ' ')
+    mostRecent.gsub!("%20", ' ')
   end
   
   File.open("dest.txt", "w") {|file| file.write(mostRecent)}
